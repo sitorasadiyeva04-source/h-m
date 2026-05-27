@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F3D7B7 !important;
+    /* Тот самый нежный персиково-кремовый цвет */
+    color: #333333;
+    width: 100%;
+    overflow-x: hidden;
+    /* Запрещаем появление горизонтальной прокрутки */
+}
+
+.main-header {
+    background-color: transparent !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0;
+    width: 100%;
+}
+
+.logo-text,
+.main-header img,
+.main-header a,
+.menu-links,
+.menu-links a {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 900;
+    color: #2c3437;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #83888f;
+    margin-left: 35px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu-links a:hover,
+.menu-links a.active-page {
+    color: #2c3437;
+}
+
+.promo-img {
+    flex: 1;
+    height: 450px;
+    background-color: transparent !important;
+}
+
+.promo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 10px 10px 0;
+}
+
+.promo-block {
+    background-color: #F3D7B7 !important;
+    /* Идентичный цвет баннера */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative !important;
+    overflow: visible !important;
+    min-height: 450px;
+    width: 100%;
+    height: 100%;
+}
+
+.promo-info {
+    flex: 1;
+    padding: 60px 80px;
+    z-index: 2;
+    background-color: transparent !important;
+}
+
+.promo-info h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    color: #2c3437;
+    margin-bottom: 20px;
+    background-color: transparent !important;
+}
+
+.promo-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a5558;
+    margin-bottom: 35px;
+    max-width: 400px;
+    background-color: transparent !important;
+}
+
+
+/* Секция обязательств */
+.commitment-section {
+    background-color: #fbf9f6 !important; /* Светло-молочный фон */
+    padding: 100px 80px !important;       /* Внутренние отступы */
+    margin: 40px -80px 0 -80px !important; /* Растягиваем сам фон до краев экрана */
+    
+    display: flex !important;              
+    align-items: center !important;
+    justify-content: center !important;    /* Центрируем содержимое */
+    gap: 80px !important;                  /* Пространство между картинкой и текстом */
+}
+
+/* Ограничиваем картинку, чтобы она не улетала и не сжималась */
+.commitment-image {
+    flex: 1 !important;
+    max-width: 450px !important;
+    display: flex !important;
+    justify-content: center !important;
+    background: transparent !important;
+}
+
+.commitment-image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* Ограничиваем ширину текста, чтобы он не растягивался на весь экран */
+.commitment-content {
+    flex: 1.2 !important;
+    max-width: 550px !important;
+    background: transparent !important;
+}
+
+.commitment-content h2 {
+    font-size: 32px !important;
+    color: #2c3437 !important;
+    margin-bottom: 25px !important;
+    background: transparent !important;
+}
+
+.commitment-content p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #4a5558 !important;
+    background: transparent !important;
+}
+
+.circle-seal,
+[alt="But first, coffee"] {
+    position: absolute !important;
+    top: 0% !important;
+    /* Садится ровно на верхнюю линию баннера */
+    left: 54.5% !important;
+    /* Четко по центру стыка фото и текста */
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 50% !important;
+    z-index: 99 !important;
+    background-color: transparent !important;
+    background: transparent !important;
+
+    /* Скрывает белый фон самой картинки круга на персиковом фоне баннера */
+    mix-blend-mode: multiply !important;
+
+    animation: rotateStrictCenter 20s linear infinite !important;
+    transform-origin: center center !important;
+}
+
+/* Анимация вращения вокруг своего центра */
+@keyframes rotateStrictCenter {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.commitment-content p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Секция Качество */
+.quality {
+    margin-bottom: 100px;
+}
+
+.quality-card {
+    background-color: ;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    padding: 60px;
+    min-height: 320px;
+}
+
+.quality-text {
+    flex: 1.2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quality-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.quality-text p {
+    color: #f4f3ee;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.quality-image {
+    flex: 0.8;
+    position: relative;
+}
+
+.quality-image img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    /* Создает эффект выступающей картинки как на макете */
+}
+
+/* Подвал */
+.footer {
+    background-color: #2c3437;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer .logo {
+    color: white;
+}
+
+.footer-nav a {
+    color: #83888f;
+    margin: 0 15px;
+}
+
+.footer-nav a:hover {
+    color: white;
+}
+
+.socials a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
